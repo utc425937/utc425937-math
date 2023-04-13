@@ -1,0 +1,137 @@
+\documentclass[]{article}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\setmainfont{Microsoft YaHei}
+%opening
+\title{Physics review}
+\author{Owen}
+
+\begin{document}
+
+\maketitle
+\begin{comment}
+	添加的快捷键:
+	keysetting\1\id=main/math/frac~0
+	keysetting\1\key=Ctrl+Shift+F
+	keysetting\2\id=main/math/dfrac~0
+	keysetting\2\key=Alt+Shift+F
+	keysetting\3\id=main/math/definitions/Corollary~0
+	keysetting\3\key=Meta+C
+	keysetting\4\id=main/math/definitions/Definition~0
+	keysetting\4\key=Meta+D
+	keysetting\5\id=main/math/definitions/Example~0
+	keysetting\5\key=Meta+E
+	keysetting\6\id=main/math/definitions/Lemma~0
+	keysetting\6\key=Meta+L
+	keysetting\7\id=main/math/definitions/Proof~0
+	keysetting\7\key=Meta+P
+	keysetting\8\id=main/math/definitions/Proposition~0
+	keysetting\8\key=Meta+Shift+P
+	keysetting\9\id=main/math/definitions/Remark~0
+	keysetting\9\key=Meta+R
+	keysetting\10\id=main/math/definitions/Theorem~0
+	keysetting\10\key=Meta+T
+	keysetting\11\id=main/math/fontstyles/mathcal~0
+	keysetting\11\key=Meta+Alt+M
+	keysetting\12\id=main/math/fontstyles/mathbb~0
+	keysetting\12\key=Meta+Alt+B
+	keysetting\13\id=main/math/fontstyles/mathfrak~0
+	keysetting\13\key=Meta+Alt+F
+	keysetting\14\id=main/math/fontaccent/bar~0
+	keysetting\14\key=Meta+Shift+B
+	keysetting\15\id=main/math/fontaccent/vec~0
+	keysetting\15\key=Meta+Shift+V
+	keysetting\16\id=main/math/fontaccent/hat~0
+	keysetting\16\key=Meta+Shift+H
+	keysetting\size=16
+	texstudio参考配置:
+	https://blog.csdn.net/XunCiy/article/details/103215124
+	https://texstudio-org.github.io/getting_started.html
+	一些坑:需要移除环境变量中all-proxy socks://127.0.0.1:9150，不知道是不是tor遗留的，否则github无法提交，新版github已经支持代理了
+\end{comment}
+\begin{abstract}
+本文在考前梳理复习大学物理第一学期的一些重点
+
+\end{abstract}
+\newpage
+\tableofcontents
+\newpage
+\section{机械振动}
+\begin{itemize}
+\item 先找平衡位置
+\item 简谐振动的能量:$E=\frac{1}{2}kA^{2}$
+\item 求振动幅度:$A=\sqrt{x_{0}^{2}+ (\frac{v_{0}}{\omega})^{2}}$
+\item 求振动初相位:$\arctan(-\frac{v_{0}}{\omega x_{0}})，依据速度情况确定最后值$
+\item 阻尼振动:\\
+$\acute{\omega} = \sqrt{\omega_{0}^{2}-\delta^{2}}$ \par
+$\omega_{共}=\sqrt{\omega_{0}^{2}-2\delta^{2}}$\par
+\end{itemize}
+\subsection{简谐运动的合成}
+\begin{itemize}
+	\item 同一方向同频率:用矢量合成
+	\item 同一方向不同频率:拍；拍频$\omega = abs{\omega_{2}-\omega_{1}}$
+	\item 不同方向:同频互相垂直合成，考虑y方向初相位2和x方向初始相位1的差\\
+	$\Delta \phi = \phi_{2}-\phi_{1}$，当$\Delta \phi \in (0,\pi)时为顺时针，其余为逆时针$
+\end{itemize}
+\section{刚体运动}
+\subsection{转动惯量}
+\begin{itemize}
+\item $I_{实心球}=\frac{2}{5}mR^{2}$
+\item $T_{球壳}=\frac{2}{3}mR^{2}$
+\item $I_{圆环}=mR^{2}$
+\item $I_{圆盘}=\frac{1}{2}mR^{2}$
+\item $I_{杆相对质心}=\frac{1}{12}ml^{2}$
+\item $I_{杆相对断点}=\frac{1}{3}ml^{2}$
+\item 平行轴定理:$I_{相对a}=I_{相对质心}+md（a，质心）^{2}$
+\item 垂直轴定理：$J_{z}为相对垂直薄板的轴的转动惯量\\
+J_{x},J_{y}为与该轴正交的互相正交的两轴的转动惯量,则J_{x}=J_{y}+J_{z}$
+\end{itemize}
+\subsection{转动定律}
+\begin{itemize}
+	\item $M=I\beta，可以随便选择轴$
+	\item $L=J\omega$
+	\item $ E_{k定轴转动}=\frac{1}{2}J\omega^{2}$
+\end{itemize}
+\subsection{质心系}
+\begin{itemize}
+	\item $L=L_{质心相对惯性系原点}+L_{刚体相对质心}$
+	\item $E_{k}=E_{质心相对惯性系}+E_{刚体相对质心}$
+	\item 惯性力合力不改变角动量
+	\item 特别地，对于二体，$E_{固有}=\frac{1}{2}\mu v_{相对}^{2}，J_{固有}=L\times \mu v_{相对}，p_{相对c}=\pm \mu v_{相对}，F_{相对}=\mu a_{相对}$
+	
+\end{itemize}
+\section{非惯性系}
+\begin{itemize}
+	\item $F_{平动虚拟}=-ma_{参考系相对惯性系}$
+	\item $F_{惯性离心}=m\omega^{2}r,方向与向心相反$
+	\item $F_{科里奥利力}=2mv\times \omega,v为相对非惯性系的速度，\omega 为非惯性系相对惯性系角速度$
+\end{itemize}
+\section{极坐标运动描述}
+\begin{itemize}
+	\item $\theta 逆时针为正$
+	\item $v_{r}=\frac{dr}{dt}$
+	\item $v_{\theta}=r\frac{d\theta}{dt}$
+	\item $a_{r}=\frac{d^{2}r}{dt^{2}}-r(\frac{d\theta}{dt})^{2}$
+	\item $a_{\theta}=r\frac{d^{2}\theta}{dt^{2}}+2\frac{dr}{dt} \frac{d\theta}{dt}$
+	
+\end{itemize}
+\section{量纲}
+\begin{itemize}
+	\item 长度，时间，质量
+\end{itemize}
+\section{杂项}
+\begin{itemize}
+	\item 不使用矢量符号默认为大小
+	\item 冲力=$pv^{2}$
+	\item <>表示平均值
+	\item 保守力是势能函数的负梯度
+	\item 散射考虑角动量和能量
+	\item 动能定理可以拆???
+	\item 对速度做垂线相交找顺心
+	\item 振动总是用余弦
+	\item 只有$\phi_{20}-\phi_{10}=\frac{\pi}{2}或\frac{3\pi}{2}且A_{1}=A_{2}時垂直振動合成才為圓$
+	\item $对阻尼振动，F_{f}=-\gamma \frac{dx}{dt},2\delta =\frac{\gamma}{m},\omega_{0}^{2}=\frac{k}{m},A=\frac{F_{0}}{m[(\omega_{0}^{2}-\omega^{2})^{2}+(2\delta \omega)^{2}]^{\frac{1}{2}}},\phi =\arctan(\frac{2\delta}{\omega^{2}_{0}-\omega^{2}})$
+\end{itemize}
+\end{document}
